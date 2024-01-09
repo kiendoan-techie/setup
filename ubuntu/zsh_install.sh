@@ -22,10 +22,6 @@ rm awscliv2.zip
 rm -rf aws
 echo "AWS CLI was installed." && sleep 5 && clear
 
-# install pyenv
-echo "Installing pyenv..." && sleep 5
-curl https://pyenv.run | bash
-
 echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
 echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
 echo 'eval "$(pyenv init -)"' >> ~/.zshrc
@@ -36,4 +32,3 @@ pyenv install 3.12
 pyenv virtualenv 3.12 dev-py3.12
 echo 'pyenv activate dev-py3.12' >> ~/.zshrc
 source ~/.zshrc
-

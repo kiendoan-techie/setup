@@ -43,6 +43,10 @@ rm *.deb
 
 echo "Finish build essentials... " && sleep 5 && clear 
 
+# install pyenv
+echo "Installing pyenv..." && sleep 5
+curl https://pyenv.run | bash
+
 # install sdkman
 curl -s "https://get.sdkman.io" | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
