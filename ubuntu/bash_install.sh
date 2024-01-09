@@ -31,7 +31,15 @@ sudo apt install -y \
     xz-utils \
     zlib1g-dev \
 		zip \
-		unzip
+		unzip \
+
+
+sudo apt install -y cowsay sl lolcat figlet
+
+# install catsay
+wget https://github.com/muhammadmuzzammil1998/catsay/releases/download/v2.1/catsay-linux-amd64.deb
+sudo dpkg -i catsay-linux-amd64.deb
+rm *.deb
 
 echo "Finish build essentials... " && sleep 5 && clear 
 
