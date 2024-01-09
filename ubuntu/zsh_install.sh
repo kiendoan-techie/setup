@@ -24,7 +24,7 @@ echo "AWS CLI was installed." && sleep 5 && clear
 
 # install pyenv
 echo "Installing pyenv..." && sleep 5
-curl https://pyenv.run | zsh
+curl https://pyenv.run | bash
 
 echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
 echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
@@ -36,21 +36,4 @@ pyenv install 3.12
 pyenv virtualenv 3.12 dev-py3.12
 echo 'pyenv activate dev-py3.12' >> ~/.zshrc
 source ~/.zshrc
-
-
-# install sdkman
-curl -s "https://get.sdkman.io" | zsh
-source "$HOME/.sdkman/bin/sdkman-init.sh"
-echo "******** sdkman installed successfully ********"
-sdk version
-
-# install java
-sdk install java 
-
-# install scala
-sdk install scala
-sdk install sbt
-
-# install spark
-sdk install spark 3.5.0
 

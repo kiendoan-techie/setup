@@ -43,6 +43,22 @@ rm *.deb
 
 echo "Finish build essentials... " && sleep 5 && clear 
 
+# install sdkman
+curl -s "https://get.sdkman.io" | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+echo "******** sdkman installed successfully ********"
+sdk version
+
+# # install java
+# sdk install java 
+
+# # install scala
+# sdk install scala
+# sdk install sbt
+
+# # install spark
+# sdk install spark 3.5.0
+
 # install zsh
 echo "Installing zsh & oh-my-zsh..."
 sudo apt install -y zsh zplug
