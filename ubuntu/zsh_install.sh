@@ -3,8 +3,14 @@ echo 'alias nz="nano ~/.zshrc" ' >> ~/.zshrc
 echo 'alias sz="source ~/.zshrc" ' >> ~/.zshrc
 source ~/.zshrc
 
+# install aws cli
+echo "Installing AWS CLI..."
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+echo "AWS CLI was installed." && sleep 5 && clear
 # install pyenv
-echo "Install pyenv..." && sleep 5
+echo "Installing pyenv..." && sleep 5
 rm -rf /home/ubuntu/.pyenv
 curl https://pyenv.run | bash
 
@@ -19,7 +25,7 @@ echo 'pyenv activate dev-py3.12' >> ~/.zshrc
 sz
 
 # install sdkman
-curl -s "https://get.sdkman.io" | bash
+curl -s "https://get.sdkman.io" | zsh
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 echo "******** sdkman installed successfully ********"
 sdk version
